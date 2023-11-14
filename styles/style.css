@@ -3,7 +3,7 @@
   --transition-duration: 0.25s;
   --font-family: "IBM Plex mono";
   
-  background: var(--background-image) no-repeat top center,
+  background: var(--background-image) no-repeat top center/cover,
     var(--background-color);
   background-size: auto 768px;
   background-attachment: fixed;
@@ -98,10 +98,12 @@
 
 .header__subtitle {
   color: var(--article-title-color);
+  font-family: var(--font-family);
   align-self: flex-end;
   font-weight: 700;
   width: 50%;
   line-height: 23.4px;
+  font-size: 18px;
 }
 
 .main {
@@ -121,6 +123,7 @@
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
+  line-height: 23.4px;
   color: var(--section-title-color);
 }
 
