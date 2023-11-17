@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: dark) {
+.page.theme_dark {
   :root {
     --main-text-color: #f1b2ce;
     --title-color: #db00ff;
@@ -16,7 +16,7 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
+.page.theme_light {
   :root {
     --main-text-color: #353430;
     --title-color: #ffc2e6;
@@ -33,3 +33,4 @@
     --rec-color: var(--background-color);
   }
 }
+
