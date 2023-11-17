@@ -1,6 +1,6 @@
 .page.theme_light {
   
-  --main-text-color: #353430;
+  --main-text-color:#353430;
   --title-color: #ffc2e6;
   --title-shadow: #ff0070;
   --title-decor: #ff8dcb;
@@ -36,3 +36,4 @@
     --rec-color: var(--background-color);
   }
 }
+
