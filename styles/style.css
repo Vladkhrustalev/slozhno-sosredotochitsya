@@ -3,22 +3,23 @@
   --transition-duration: 0.25s;
   --font-family: "IBM Plex mono";
   
-  background: center / cover var(--background-image) no-repeat,
+  background: var(--background-image),
     var(--background-color);
-  background-size: auto 768px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  background-size: 90% 100%;
   background-attachment: fixed;
   color: var(--main-text-color);
   transition-duration: var(--transition-duration);
   font-family: var(--font-family);
-
-
-
 }
 
 .header {
   padding: 0 20px;
   position: relative;
   min-height: 668px;
+  height: 100vh;
 }
 
 .header__rec {
@@ -224,6 +225,7 @@
   position: relative;
   text-align: center;
   min-height: 668px;
+  height: 100vh;
 }
 
 .footer__title {
@@ -319,7 +321,7 @@
   }
 
   .header__title {
-      margin-left: -3%;
+      padding-left: 0px;
   }
 
   .section__title {
@@ -343,9 +345,6 @@
 
 
 @media (width < 1024px) and (width >=375px) {
-  .header__title {
-      text-shadow: 4px 4px 0px var(--title-decor);
-  }
 
   .section:nth-of-type(2) .section__article-list {
       gap: 20px;
@@ -400,13 +399,7 @@
       gap: 20px 19px;
   }
 }
-
-@media (width < 768px) {
-  .section:last-of-type .section__image {
-      width: 100%;
-      height: auto;
-  }
-
+@media (width < 768px) { 
   .section:last-of-type .section__image-container {
       width: 100px;
   }
@@ -416,45 +409,4 @@
       flex-direction: column;
       gap: 10px;
   }
-}
-
-@media (prefers-color-scheme: light) {
-  .section__article-item {
-    color: var(--main-text-color);
-  }
-}
-
-
-.decorated-zone::before {
-  border-left: 1px solid var(--corners-color);
-  border-bottom: 1px solid var(--corners-color);
-  left: 20px;
-  bottom: 20px;
-}
-.decorated-zone::after {
-  border-right: 1px solid var(--corners-color);
-  border-top: 1px solid var(--corners-color);
-  right: 20px;
-  top: 20px;
-}
-.decorated-zone::after, .decorated-zone::before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-}
-
-@media (width < 768px) and (width >= 375px) {
-  .decorated-zone::before {
-    left: 10px;
-    bottom: 17px;
-  }
-  .decorated-zone::after {
-    right: 10px;
-    top: 10px;
-  }
-}
-
-.title-decor {
-  background: var(--title-decor);
 }
