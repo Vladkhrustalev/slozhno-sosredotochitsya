@@ -1,25 +1,22 @@
 .page {
-  
+
   --transition-duration: 0.25s;
   --font-family: "IBM Plex mono";
-  
+
   background: var(--background-image),
     var(--background-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  background-size: 90% 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--main-text-color);
   transition-duration: var(--transition-duration);
   font-family: var(--font-family);
 }
-
 .header {
   padding: 0 20px;
   position: relative;
-  min-height: 668px;
-  height: 100vh;
+  min-height: 940px;
 }
 
 .header__rec {
@@ -41,6 +38,10 @@
   background-color: var(--rec-color);
   top: 50%;
   right: 0;
+}
+
+.title-decor {
+  background: var(--title-decor);
 }
 
 .header__theme-menu {
@@ -82,11 +83,14 @@
   border: 1px solid;
 }
 
-.header__title {
+.title {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
-  margin-left: -2%;
   color: var(--title-color);
+}
+
+.header__title {
+  margin-left: -2%;
   text-shadow: 4px 4px 0px var(--title-shadow);
 }
 
@@ -224,15 +228,41 @@
   padding: 282px 20px;
   position: relative;
   text-align: center;
-  min-height: 668px;
-  height: 100vh;
+  min-height: 940px;
 }
 
 .footer__title {
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
-  color: var(--title-color);
   text-shadow: 2px 2px 0px var(--title-shadow);
+}
+
+.decorated-zone::before {
+  border-left: 1px solid var(--corners-color);
+  border-bottom: 1px solid var(--corners-color);
+  left: 20px;
+  bottom: 20px;
+}
+.decorated-zone::after {
+  border-right: 1px solid var(--corners-color);
+  border-top: 1px solid var(--corners-color);
+  right: 20px;
+  top: 20px;
+}
+.decorated-zone::after, .decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .decorated-zone::before {
+    left: 10px;
+    bottom: 17px;
+  }
+  .decorated-zone::after {
+    right: 10px;
+    top: 10px;
+  }
 }
 
 @media (width < 768px) and (width >=375px) {
