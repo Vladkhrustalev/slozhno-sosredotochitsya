@@ -14,9 +14,9 @@
   font-family: var(--font-family);
 }
 .header {
-  padding: 0 20px;
-  position: relative;
-  min-height: 100%;
+  padding: 0 20px; 
+  position: relative; 
+  min-height: 100vh; 
 }
 
 .header__rec {
@@ -228,7 +228,7 @@
   padding: 282px 20px;
   position: relative;
   text-align: center;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .footer__title {
